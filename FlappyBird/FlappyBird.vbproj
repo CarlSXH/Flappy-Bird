@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6671AA0A-0E88-47FB-B363-4A898AB610C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FlappyBird.My.MyApplication</StartupObject>
+    <RootNamespace>FlappyBird</RootNamespace>
+    <AssemblyName>FlappyBird</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FlappyBird.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FlappyBird.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Flappy_Bird.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation.vb" />
+    <Compile Include="Boards.vb" />
+    <Compile Include="ControlsGet.vb" />
+    <Compile Include="Dimesion.vb" />
+    <Compile Include="frmGame.Designer.vb">
+      <DependentUpon>frmGame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bird.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmGame.resx">
+      <DependentUpon>frmGame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGDay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGNight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdB1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdB2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdB3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdY1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdY2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdY3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Land.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PipeGDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PipeGUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Score1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medals_Copper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medals_Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medals_Silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medals_WhiteGold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumberContext9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScoreBoard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textGameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textGetReady.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blink0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blink1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blink2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tutorial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flappy_Bird.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
